@@ -48,7 +48,9 @@ const page:any = ref<number>(1)
     </h1>
     <div class="flex items-center space-x-4 justify-center text-center mt-10">
         <button @click="decrementePage" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">-</button>
-        {{ page }} 
+        <div >
+            {{ page }} 
+        </div>
         <button @click="incrementPage" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">+</button>
     </div>
 
