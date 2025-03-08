@@ -20,9 +20,9 @@ const page:any = ref<number>(1)
     };
 
     const seeCharacterDetails =(character_id: number)=>{
-        router.push(`details/${character_id}`)
-    };
-    
+        router.push(`/details/${character_id}`)
+    };   
+
     const incrementPage = () => {
         if(page.value !== null){
             page.value++
