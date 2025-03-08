@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, } from "vue";
 import { useRouter } from "vue-router";
-import { Character } from "../types/Character";
+import  type { Character } from "../../types/character";
     
 const router = useRouter();
 const characters = ref<Character[]>([])
@@ -43,11 +43,15 @@ const page:any = ref<number>(1)
 </script>
 
 <template>
-
     <div>
         <button @click="incrementPage">+</button>
         {{ page }}
         <button @click="decrementePage">-</button>
+    </div>
+
+    <div v-for="character in characters" :key="character.id">
+        <img :src="character.image" alt="character.name" />
+        <h2>{{ character.name }}</h2>
     </div>
 
 </template>
