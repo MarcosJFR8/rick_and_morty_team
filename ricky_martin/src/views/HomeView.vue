@@ -19,7 +19,7 @@ const characters = ref<Character[]>([])
     };
 
     const seeCharacterDetails =(character_id: number)=>{
-        router.push(`details/${character_id}`)
+        router.push(`/details/${character_id}`)
     };   
 
     onMounted(() => {
@@ -29,9 +29,11 @@ const characters = ref<Character[]>([])
 
 <template>
     <div v-for="character in characters" :key="character.id">
-        <img :src="character.image" alt="character.name" />
+        <div @click="seeCharacterDetails(character.id)">
+            <img :src="character.image" alt="character.name" />
         <h2>{{ character.name }}</h2>
-
+        </div>
+        
 
 
     </div>
