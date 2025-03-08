@@ -29,3 +29,7 @@ const characters = ref<Character[]>([])
 <template>
 
 </template>
+
+<style scoped>
+
+</style>
