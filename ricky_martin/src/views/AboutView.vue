@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
 import type { Character } from '@/types/character';
 
-const router = useRouter()
+const route = useRoute()
 const id = route.params.id
 const character = ref<Character>()
 

@@ -20,7 +20,7 @@ const loadCharacters = async () => {
     };
 
 const seeCharacterDetails =(character_id: number)=>{
-    router.push(`/details/${character_id}`)
+    router.push(`/about/${character_id}`)
     };   
 
 const incrementPage = () => {
