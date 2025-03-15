@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import type { Character } from '@/types/character';
+import type { Character } from '../../types/character';
 
 const route = useRoute()
 const id = route.params.id
 const character = ref<Character>()
 
 const loadCharacters = async () => {
-  const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`)
-  const data = await response.json()
-  character.value = data
+    const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`)
+    const data = await response.json()
+    character.value = data
 }
 
 onMounted(() => {
@@ -25,7 +25,7 @@ onMounted(() => {
         <div class="flex justify-center items-center">
             <img class="rounded-2xl border-4 border-blue-800" :src="character.image" :alt="character.name">
         </div>
-  
+
         <!-- Description Card Container -->
         <div class="flex justify-center items-center">
         <div class="text-center p-4 shadow-2xl rounded-2xl bg-white">
