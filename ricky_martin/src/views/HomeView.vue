@@ -7,7 +7,6 @@ const router = useRouter();
 const characters = ref<Character[]>([])
 const searchName = ref('')
 const searchStatus = ref('')
-const status = ref('')
 const page:any = ref<number>(1)
 
 const statusFilters = ['', 'Alive', 'Dead', 'unknown']
